@@ -12,9 +12,3 @@ Built with:
 * Media queries
 * HTML
 
-# Screenshots
-https://user-images.githubusercontent.com/74563848/179057814-a9530a4f-7482-4fe7-9a81-81d9347dcb7d.mp4
-
-
-https://user-images.githubusercontent.com/74563848/179058025-80041ba2-cfd7-45df-88d6-3037cf3d9941.mp4
-
