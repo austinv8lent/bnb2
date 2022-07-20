@@ -2,6 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  width: 100%;
 }
 
 h2 {
@@ -32,21 +33,21 @@ section.alternate-background {
 
 main img {
   width: 100%;
+  height: auto;
 }
-
-/* ---  Groups & Items --- */
 
 .group {
   display: flex;
   flex-direction: column;
-  width: 100%
+}
+
+.col {
+  align-items: center;
 }
 
 .item {
   flex: 1;
-  justify-content:center;
   margin: 10px;
-
 }
 
 .item-double {
@@ -59,20 +60,29 @@ header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 50px;
   color: #fff;
 }
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
 header nav ul {
   display: flex;
-  justify-content:center
+  padding-left: 0;
+  list-style: none;
 }
+
 header nav ul li {
-  display: flex;
   list-style-type: none;
+  font-size: x-large;
 }
 
 header nav ul li a {
@@ -81,45 +91,56 @@ header nav ul li a {
   padding: 0 20px 0 0;
 }
 
+header nav ul li:last-child a {
+  margin-right: 0;
+  padding-right: 0;
+}
+
 header nav ul li a:hover {
   color: #bdbdbd;
   text-decoration: none;
 }
 
 /* -------  Search Form ------- */
+
 form {
-  display:flex;
-  flex-direction:column;
   border: 2px solid #ff385c;
   padding: 10px;
-}
-form div{
-  display:flex;
-  justify-content:space-between;
-  flex-direction:row;
 }
 
 form label {
   font-weight: bold;
 }
 
-form select,
-form input {
-
+form select, form input {
   margin-bottom: 20px;
   width: 180px;
-
 }
 
 form button {
-  display:flex;
-  justify-content:center;
   background-color: #ff385c;
   border: none;
   color: #fff;
   font-size: 24px;
   padding: 15px;
   width: 100%;
+}
+
+.date::placeholder {
+  color: black;
+}
+
+.space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* ------- Ideas ------- */
+
+.col2 {
+  flex-direction: column;
+  align-items: center;
 }
 
 /* -------  Footer ------- */
@@ -134,135 +155,74 @@ footer p {
   padding: 20px;
 }
 
-.bigitem {
-  min-width:0;
-  width:100%
-}
-#location {
-  min-width:0;
+/* -------  Media Query for Desktop ------- */
 
-}
-/* -------  Media Query ------- */
+/* *** media query for header */
 
-@media all and (min-width:480px) {
-  .destroy {
-    display:flex;
-    width:auto;
-    min-width: none;
+@media all and (min-width: 480px) {
+  header {
+    /* Changes the default setting from `block` to `flex`. */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  
-  form input {
+  header nav {
+    align-items: center;
+    justify-content: center;
+  }
+  header nav ul li a:hover {
+    color: #bdbdbd;
+  }
+  .logo {
+    font-size: 30px;
+    justify-content: center;
+  }
+}
 
-    margin-bottom: 20px;
-    width: 100%;
-  
+/* rule for Form area */
+
+@media all and (min-width: 1200px) {
+  .form-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .space-between {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
   }
   .button-container {
     display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content:center;
-    margin: 0px;
-min-width:0;
-width:100%
+    justify-content: flex-end;
   }
-  .big {
-    display:flex;
+}
+
+/* rule for About section */
+
+@media all and (min-width: 750px) {
+  .col {
+    display: flex;
     flex-direction: row;
-  justify-content:space-between
+    justify-content: flex-start;
   }
-   .location {
-    min-width:0
-   }
-  .bigitem {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content:center;
+  .padding {
     margin: 10px;
-min-width:0;
-width:100%
   }
-  header {
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-  }
-  .logo {
-    margin: 14px 0 14px 20px;
-    padding-top: 0;
-    font-size: 42px;
-  }
-  form {
-    flex-direction:row;
-    align-content: center;
-  }
-  .group {
-    flex-direction:row
-  }
-  .host {
-    display:flex;
-    flex-direction:row
-  }
-  .container {
-    display:flex;
-
-  }
-  .ideasgroup-1 {
-    display: flex;
-
-    /* flex: 1;
-    justify-content:center; */
-  }
-  .ideasitem-1 {
-    display: flex;
-    max-width:50%;
-    margin-right: 10px;
-    /* flex: 1;
-    flex-direction: column;
-    justify-content:center;
-    margin: 10px */
-  }
-  .ideasgrouptext {
-    display:flex;
-    justify-content:space-around
-  }
-  .ideastext {
-    display:flex;
-    max-width:50%
-  }
-  .ideasgroup-2 {
-    display: flex;
-
-    /* flex: 1;
-    justify-content:center; */
-  }
-  .ideasitem-2 {
-    display: flex;
-    max-width:50%;
-    margin-right: 10px;
-    /* flex: 1;
-    flex-direction: column;
-    justify-content:center;
-    margin: 10px */
-  }
-
-/* @media all and (max-width: 480px) {
-  .item {
-    display:flex;
-    justify-content:space-between;
-    flex-direction:row;
-  }
-} */
 }
-@media all and (max-width:400px) {
-  .logo{
-    font-size:50px
-  }
 
-}
-@media all and (min-width:480px) and (max-width:600px) {
-  form button {
-    font-size: 4vw;
+/* rule for Ideas section */
+
+@media all and (min-width: 750px) {
+  .picture-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .col2 {
+    flex: 1 0 calc(35% - 20px);
+    margin: 5px;
+  }
+  .padding {
+    margin: 10px;
   }
 }
