@@ -1,7 +1,7 @@
-/* ------- General Styles ------- */
+/* -------  General Styles ------- */
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 h2 {
@@ -30,55 +30,55 @@ section.alternate-background {
   color: #fff;
 }
 
-img {
+main img {
   width: 100%;
 }
 
-/* --- Groups & Items --- */
+/* ---  Groups & Items --- */
 
 .group {
   display: flex;
   flex-direction: column;
+  width: 100%
 }
 
 .item {
   flex: 1;
+  justify-content:center;
   margin: 10px;
+
 }
 
 .item-double {
   flex: 2;
 }
 
-/* ------- Navigation ------- */
+/* -------  Navigation ------- */
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 10px 20px;
+  padding: 20px 20px 0 20px;
   text-align: center;
 }
 
 .logo {
-  font-family: 'Pangolin', cursive;
-  font-size: 42px;
+  font-family: "Pangolin", cursive;
+  font-size: 72px;
   color: #fff;
 }
-
 header nav ul {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content:center
 }
-
 header nav ul li {
+  display: flex;
   list-style-type: none;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
+  padding: 0 20px 0 0;
 }
 
 header nav ul li a:hover {
@@ -86,17 +86,17 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
-/* ------- Search Form ------- */
+/* -------  Search Form ------- */
 form {
+  display:flex;
+  flex-direction:column;
   border: 2px solid #ff385c;
-  padding: 20px;
+  padding: 10px;
 }
-
-form div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
+form div{
+  display:flex;
+  justify-content:space-between;
+  flex-direction:row;
 }
 
 form label {
@@ -105,10 +105,15 @@ form label {
 
 form select,
 form input {
+
+  margin-bottom: 20px;
   width: 180px;
+
 }
 
 form button {
+  display:flex;
+  justify-content:center;
   background-color: #ff385c;
   border: none;
   color: #fff;
@@ -117,21 +122,7 @@ form button {
   width: 100%;
 }
 
-form .select {
-  display: inline-block;
-}
-
-/* ------- About ------- */
-#about img {
-  padding: 20px 0;
-}
-
-/* ------- Ideas ------- */
-#ideas .invis-mobile {
-  display: none;
-}
-
-/* ------- Footer ------- */
+/* -------  Footer ------- */
 
 footer {
   background-color: #ff385c;
@@ -143,135 +134,135 @@ footer p {
   padding: 20px;
 }
 
-/* -------  Media Query ------- */
-@media all and (min-width: 480px) {
-  /* ------- Header ------- */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    font-size: 30px;
-  }
-
-  header nav ul li {
-    padding: 0 8px;
-  }
-
-  /* ------- Stay ------- */
-  #stay form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 0px 10px;
-  }
-
-  #stay label {
-    width: 100%;
-  }
-
-  #stay .select {
-    width: 100%;
-  }
-
-  #stay button {
-    padding: 10px 20px;
-    font-size: 20px;
-  }
-
-  #stay div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 5px;
-  }
-
-  /* ------- About ------- */
-  #about .about-inner-content {
-    text-align: center;
-  }
-
-  #about img {
-    width: 250px;
-    padding: 30px;
-  }
-
-  /* ------- Ideas ------- */
+.bigitem {
+  min-width:0;
+  width:100%
 }
+#location {
+  min-width:0;
 
-@media all and (min-width: 800px) {
-  /* ------- About ------- */
-  #about {
-    padding: 30px;
+}
+/* -------  Media Query ------- */
+
+@media all and (min-width:480px) {
+  .destroy {
+    display:flex;
+    width:auto;
+    min-width: none;
   }
+  
+  form input {
 
-  #about .about-inner-content {
-    display: flex;
+    margin-bottom: 20px;
     width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
+  
+  }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content:center;
+    margin: 0px;
+min-width:0;
+width:100%
+  }
+  .big {
+    display:flex;
     flex-direction: row;
+  justify-content:space-between
   }
-
-  #about p {
-    width: 50%;
-  }
-
-  #about img {
-    padding: 10px;
-  }
-
-  /* ------- Ideas ------- */
-
-  #ideas .ideas-container {
-    display: flex;
-    justify-content: space-between;
-    width: 900px;
-    margin: 40px auto;
-  }
-
-  #ideas img {
-    width: 350px;
-    padding: 20px;
-  }
-
-  #ideas .forests {
+   .location {
+    min-width:0
+   }
+  .bigitem {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    justify-content:center;
+    margin: 10px;
+min-width:0;
+width:100%
   }
+  header {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+  }
+  .logo {
+    margin: 14px 0 14px 20px;
+    padding-top: 0;
+    font-size: 42px;
+  }
+  form {
+    flex-direction:row;
+    align-content: center;
+  }
+  .group {
+    flex-direction:row
+  }
+  .host {
+    display:flex;
+    flex-direction:row
+  }
+  .container {
+    display:flex;
 
-  #ideas .beaches {
+  }
+  .ideasgroup-1 {
     display: flex;
+
+    /* flex: 1;
+    justify-content:center; */
+  }
+  .ideasitem-1 {
+    display: flex;
+    max-width:50%;
+    margin-right: 10px;
+    /* flex: 1;
     flex-direction: column;
+    justify-content:center;
+    margin: 10px */
   }
-
-  #ideas .invis-mobile {
-    display: inline-block;
+  .ideasgrouptext {
+    display:flex;
+    justify-content:space-around
   }
-
-  #ideas .rustic-cabins {
-    display: none;
+  .ideastext {
+    display:flex;
+    max-width:50%
   }
-
-  #ideas .pet-friendly {
-    display: none;
-  }
-
-  /* ------- Host ------- */
-  #host {
+  .ideasgroup-2 {
     display: flex;
-    align-items: center;
-  }
 
-  #host .host-group {
+    /* flex: 1;
+    justify-content:center; */
+  }
+  .ideasitem-2 {
     display: flex;
+    max-width:50%;
+    margin-right: 10px;
+    /* flex: 1;
     flex-direction: column;
-    padding: 20px;
+    justify-content:center;
+    margin: 10px */
   }
 
-  #host img {
-    width: 50%;
+/* @media all and (max-width: 480px) {
+  .item {
+    display:flex;
+    justify-content:space-between;
+    flex-direction:row;
+  }
+} */
+}
+@media all and (max-width:400px) {
+  .logo{
+    font-size:50px
+  }
+
+}
+@media all and (min-width:480px) and (max-width:600px) {
+  form button {
+    font-size: 4vw;
   }
 }
