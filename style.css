@@ -211,17 +211,17 @@ width:100%
   .ideasgroup-1 {
     display: flex;
 
-    /* flex: 1;
-    justify-content:center; */
+     flex: 1;
+    justify-content:center; 
   }
   .ideasitem-1 {
     display: flex;
     max-width:50%;
     margin-right: 10px;
-    /* flex: 1;
+     flex: 1;
     flex-direction: column;
     justify-content:center;
-    margin: 10px */
+    margin: 10px 
   }
   .ideasgrouptext {
     display:flex;
@@ -234,26 +234,26 @@ width:100%
   .ideasgroup-2 {
     display: flex;
 
-    /* flex: 1;
-    justify-content:center; */
+     flex: 1;
+    justify-content:center; 
   }
   .ideasitem-2 {
     display: flex;
     max-width:50%;
     margin-right: 10px;
-    /* flex: 1;
+     flex: 1;
     flex-direction: column;
     justify-content:center;
-    margin: 10px */
+    margin: 10px 
   }
 
-/* @media all and (max-width: 480px) {
+ @media all and (max-width: 480px) {
   .item {
     display:flex;
     justify-content:space-between;
     flex-direction:row;
   }
-} */
+} 
 }
 @media all and (max-width:400px) {
   .logo{
